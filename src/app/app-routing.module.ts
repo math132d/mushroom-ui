@@ -7,7 +7,7 @@ import { MushroomComponent } from './mushroom/mushroom.component'
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'mushroom/:mushroom-id', component: MushroomComponent }
+  { path: 'mushroom/:mushroomId', component: MushroomComponent }
 ];
 
 @NgModule({
