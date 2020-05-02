@@ -3,6 +3,11 @@ html, body{
     margin: 0px;
 }
 
+.center {
+    margin: auto;
+    width: 60%;
+}
+
 em {
     font-weight: bold;
     font-style: normal;
