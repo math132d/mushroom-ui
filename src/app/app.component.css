@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body{
     padding: 0px;
     margin: 0px;
@@ -6,6 +10,7 @@ html, body{
 .center {
     margin: auto;
     width: 60%;
+    min-width: 600px;
 }
 
 em {
