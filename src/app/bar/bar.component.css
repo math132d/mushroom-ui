@@ -9,7 +9,10 @@ nav {
 }
 
 .autocomplete {
+    width: 20rem;
+    max-width: 100%;
     position: relative;
+    margin: auto;
     display: inline-block;
 }
 
