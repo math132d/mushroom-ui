@@ -1,7 +1,5 @@
 <nav>
-    <div>
-        <h3>Mushrooms</h3>
-    </div>
+    
     <div class="autocomplete">
         <input #input type="text" placeholder="Search" (input)="onChange(input.value)" (focus)="onFocusChange(true)" (blur)="onFocusChange(false)">
         <div *ngIf="inFocus" class="autocomplete-list">

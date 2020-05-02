@@ -1,7 +1,7 @@
 nav {
     background-color: lightgray;
-    padding: 5px;
-    height: 3rem;
+    padding: 6px;
+    height: 2rem;
 
     display: flex;
     flex-direction: row;
@@ -20,8 +20,8 @@ nav {
     border: none;
     border-radius: 3px;
 
-    padding: 4px;
-    font-size: 1.2rem;
+    padding: 5px;
+    font-size: 1.1rem;
 }
 
 .autocomplete-list {
