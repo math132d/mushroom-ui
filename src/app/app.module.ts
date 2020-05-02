@@ -8,6 +8,9 @@ import { MainComponent } from './main/main.component';
 import { BarComponent } from './bar/bar.component';
 import { MushroomComponent } from './mushroom/mushroom.component';
 import { AddMushroomComponent } from './add-mushroom/add-mushroom.component';
+import { MushroomListItemComponent } from './mushroom-list-item/mushroom-list-item.component';
+import { FamilyComponent } from './family/family.component';
+import { GenusComponent } from './genus/genus.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { AddMushroomComponent } from './add-mushroom/add-mushroom.component';
     MainComponent,
     BarComponent,
     MushroomComponent,
-    AddMushroomComponent
+    AddMushroomComponent,
+    MushroomListItemComponent,
+    FamilyComponent,
+    GenusComponent
   ],
   imports: [
     BrowserModule,
