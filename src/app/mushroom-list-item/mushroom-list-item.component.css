@@ -1,0 +1,37 @@
+* {
+    font-family: 'Helvetica Neue', sans-serif; 
+    margin: 0;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    height: 6rem;
+}
+
+.list-item img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.content h4 {
+    margin: 5px 0px;
+    text-transform: capitalize;
+}
+
+.content p {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

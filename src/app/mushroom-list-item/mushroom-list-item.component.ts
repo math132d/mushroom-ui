@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mushroom-list-item',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mushroom-list-item.component.css']
 })
 export class MushroomListItemComponent implements OnInit {
+  @Input() mushroom: any;
 
   constructor() { }
 
