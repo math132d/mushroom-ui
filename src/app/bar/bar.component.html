@@ -1,5 +1,9 @@
 <nav>
-    
+    <div>
+        <a class="icon" [routerLink]="['/']">
+            HOME
+        </a>
+    </div>
     <div class="autocomplete">
         <input #input type="text" placeholder="Search" (input)="onChange(input.value)" (focus)="onFocusChange(true)" (blur)="onFocusChange(false)">
         <div *ngIf="inFocus" class="autocomplete-list">
@@ -9,5 +13,8 @@
         </div>
     </div>
     <div>
+        <a class="icon" [routerLink]="['/upload']">
+            ADD
+        </a>
     </div>
 </nav>

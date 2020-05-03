@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-mushroom',
@@ -8,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MushroomComponent implements OnInit {
   mushroomId = {}
+  mushroom: any;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private http: HttpClient
   ) {
 
   }
@@ -18,9 +21,13 @@ export class MushroomComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.mushroomId = params.get('mushroomId');
+      this.getMushroom()
+    })
+  }
 
-      //Get information about mushroom using get
-
+  getMushroom(){
+    this.http.get<any>(`http://thestaticcow.dk:30031/mushroom/${this.mushroomId}`).subscribe(data => {
+      this.mushroom = data;
     })
   }
 }

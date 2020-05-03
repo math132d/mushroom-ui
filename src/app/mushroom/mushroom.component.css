@@ -2,24 +2,33 @@ figure {
     margin: 0px;
 }
 
+main {
+    margin-top: 20px;
+}
+
+nav {
+    background-color: transparent;
+    border-bottom: 3px rgb(82, 73, 64) solid;
+}
+
 h1 { 
     color: #111; 
     font-family: 'Helvetica Neue', sans-serif; 
-    font-weight: bold; 
+    font-weight: 600; 
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center; 
 }
 
 h3 {
-    color: white; 
+    color: rgb(82, 73, 64); 
     font-family: 'Open Sans', sans-serif; 
     font-size: 20px; 
-    font-weight: 300; 
+    font-weight: bold; 
     line-height: 32px; 
     text-align: left;
-    background-color: rgb(82, 73, 64);
-    padding: 5px 20px;
+
+    margin: 0px 10px;
 }
 
 .mimg {
