@@ -1,29 +1,48 @@
 <form [formGroup]="mushroomForm" (ngSubmit)="onSubmit()">
+   <div class="all">
+        <div class="nm">
+                <p>Common Name</p>
+                <input id="name" formControlName="name" type="text"> 
+            </div>
 
-    <label for="name">Common Name: </label>
-    <input id="name" formControlName="name" type="text">
+            <!-- general info vvv -->
+            <div class="general">
+                <fieldset>
+                <label for="family">Family: </label>
+                <input formControlName="family" type="text"><br>
+                <label for="genus">Genus: </label>
+                <input formControlName="genus" type="text"><br>
+                <label for="species">Species: </label>
+                <input formControlName="species" type="text"><br>
+            </fieldset>
+            </div>
+            
 
-    <fieldset>
-        <label for="family">Family: </label>
-        <input formControlName="family" type="text"><br>
-        <label for="genus">Genus: </label>
-        <input formControlName="genus" type="text"><br>
-        <label for="species">Species: </label>
-        <input formControlName="species" type="text"><br>
-    </fieldset>
+            <!-- radio icons vvv -->
+            <div class="edibility">
+                <label class="edible">
+                    <input type="radio" name="formControlName" value="edible" checked>
+                    <img src="assets/Icons/edible.png" alt="edible">
+                </label>
 
-    <fieldset>
-        <label for="edible">Edible</label>
-        <input type="radio" name="edible">
-        <label for="poisonous">Poisonous</label>
-        <input type="radio" name="edible">
-    </fieldset>
+                <label class="poisonous">
+                    <input type="radio" name="formControlName" value="poisonous">
+                    <img src="assets/Icons/poison.png" alt="poison">
+                </label>
+                <hr> 
+            </div>
+            
+            <!-- description vvv -->
+            <div class="desc">
+                <label for="description">Description: </label><br>
+                <textarea formControlName="description" cols="82" rows="10"></textarea><br>
 
-    <label for="description">Description: </label><br>
-    <textarea formControlName="description" cols="30" rows="10"></textarea><br>
-
-    <label for="image">Image: </label>
-    <input type="text" formControlName="image">
+                <label for="image">Image: </label>
+                <input type="text" formControlName="image">
+                
+                <button type="submit">Post</button>  
+            </div>
+   </div>
     
-    <button type="submit">Post</button>
+    
 </form>

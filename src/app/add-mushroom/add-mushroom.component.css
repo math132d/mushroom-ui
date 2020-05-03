@@ -1,0 +1,40 @@
+*{
+    font-family: sans-serif; 
+}
+
+.all{
+    border:2px rgb(148, 129, 110) solid;
+    border-radius: 2px;
+    margin:4em 0 0 0;
+    padding: 2em;
+}
+
+.nm{
+    margin:1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* radio icons vvv */
+[type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+    padding:4px;
+    width:6%;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+[type=radio]:checked + img {
+    background-color: rgb(148, 129, 110);
+    padding:4px;
+    border-radius: 3px;
+}
+
+
