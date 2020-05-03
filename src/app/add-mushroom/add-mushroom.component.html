@@ -5,25 +5,28 @@
 
     <fieldset>
         <label for="family">Family: </label>
-        <input formControlName="family" type="text"><br>
+        <input required formControlName="family" type="text"><br>
         <label for="genus">Genus: </label>
-        <input formControlName="genus" type="text"><br>
+        <input required formControlName="genus" type="text"><br>
         <label for="species">Species: </label>
-        <input formControlName="species" type="text"><br>
+        <input required formControlName="species" type="text"><br>
     </fieldset>
 
     <fieldset>
         <label for="edible">Edible</label>
-        <input type="radio" name="edible">
+        <input required type="radio" value="edible" formControlName="edible">
         <label for="poisonous">Poisonous</label>
-        <input type="radio" name="edible">
+        <input required type="radio" value="poisonous" formControlName="edible">
     </fieldset>
 
     <label for="description">Description: </label><br>
-    <textarea formControlName="description" cols="30" rows="10"></textarea><br>
+    <textarea required formControlName="description" cols="30" rows="10"></textarea><br>
 
     <label for="image">Image: </label>
-    <input type="text" formControlName="image">
+    <input required type="text" formControlName="image">
+
+    <p *ngIf="mushroomForm.invalid && mushroomForm.touched">Please fill in all fields!</p>
+    <p *ngIf="submitted">Mushroom submitted!</p>
     
     <button type="submit">Post</button>
 </form>
