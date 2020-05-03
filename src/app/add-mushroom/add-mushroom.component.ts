@@ -36,8 +36,8 @@ export class AddMushroomComponent {
         genus: formData.genus,
         species: formData.species
       },
-      edible: Boolean(formData.edible),
-      poisonous: Boolean(formData.poisonous),
+      edible: Boolean(formData.edible == 'edible'),
+      poisonous: Boolean(formData.edible == 'poisonous'),
       description: formData.description,
       images: [
         formData.image
