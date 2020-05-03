@@ -1,1 +1,29 @@
-<p>add-mushroom works!</p>
+<form [formGroup]="mushroomForm" (ngSubmit)="onSubmit()">
+
+    <label for="name">Common Name: </label>
+    <input id="name" formControlName="name" type="text">
+
+    <fieldset>
+        <label for="family">Family: </label>
+        <input formControlName="family" type="text"><br>
+        <label for="genus">Genus: </label>
+        <input formControlName="genus" type="text"><br>
+        <label for="species">Species: </label>
+        <input formControlName="species" type="text"><br>
+    </fieldset>
+
+    <fieldset>
+        <label for="edible">Edible</label>
+        <input type="radio" name="edible">
+        <label for="poisonous">Poisonous</label>
+        <input type="radio" name="edible">
+    </fieldset>
+
+    <label for="description">Description: </label><br>
+    <textarea formControlName="description" cols="30" rows="10"></textarea><br>
+
+    <label for="image">Image: </label>
+    <input type="text" formControlName="image">
+    
+    <button type="submit">Post</button>
+</form>

@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-mushroom',
   templateUrl: './add-mushroom.component.html',
   styleUrls: ['./add-mushroom.component.css']
 })
-export class AddMushroomComponent implements OnInit {
+export class AddMushroomComponent {
+  mushroomForm;
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+    this.mushroomForm = this.formBuilder.group({
+      name: '',
+      family: '',
+      genus: '',
+      species: '',
+      description: '',
+      image: ''
+    })
+  }
 
-  ngOnInit(): void {
+  onSubmit(): void {
+    console.log(this.mushroomForm.value);
+    this.mushroomForm.reset();
   }
 
 }
