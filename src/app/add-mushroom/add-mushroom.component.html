@@ -1,48 +1,49 @@
 <form [formGroup]="mushroomForm" (ngSubmit)="onSubmit()">
    <div class="all">
         <div class="nm">
-                <p>Common Name</p>
-                <input id="name" formControlName="name" type="text"> 
-            </div>
+            <p>Common Name</p>
+            <input id="name" formControlName="name" type="text"> 
+        </div>
 
-            <!-- general info vvv -->
-            <div class="general">
-                <fieldset>
-                <label for="family">Family: </label>
-                <input formControlName="family" type="text"><br>
-                <label for="genus">Genus: </label>
-                <input formControlName="genus" type="text"><br>
-                <label for="species">Species: </label>
-                <input formControlName="species" type="text"><br>
-            </fieldset>
-            </div>
+        <!-- general info vvv -->
+        <div class="general">
+            <fieldset>
+            <label for="family">Family: </label>
+            <input formControlName="family" type="text"><br>
+            <label for="genus">Genus: </label>
+            <input formControlName="genus" type="text"><br>
+            <label for="species">Species: </label>
+            <input formControlName="species" type="text"><br>
+        </fieldset>
+        </div>
+        
+        <!-- radio icons vvv -->
+        <div class="edibility">
+            <label class="edible">
+                <input type="radio" name="formControlName" value="edible" checked>
+                <img src="assets/Icons/edible.png" alt="edible">
+            </label>
+
+            <label class="poisonous">
+                <input type="radio" name="formControlName" value="poisonous">
+                <img src="assets/Icons/poison.png" alt="poison">
+            </label>
+            <hr> 
+        </div>
+        
+        <!-- description vvv -->
+        <div class="desc">
+            <label for="description">Description: </label><br>
+            <textarea formControlName="description" cols="82" rows="10"></textarea><br>
+
+            <label for="image">Image: </label>
+            <input type="text" formControlName="image">
             
-
-            <!-- radio icons vvv -->
-            <div class="edibility">
-                <label class="edible">
-                    <input type="radio" name="formControlName" value="edible" checked>
-                    <img src="assets/Icons/edible.png" alt="edible">
-                </label>
-
-                <label class="poisonous">
-                    <input type="radio" name="formControlName" value="poisonous">
-                    <img src="assets/Icons/poison.png" alt="poison">
-                </label>
-                <hr> 
-            </div>
-            
-            <!-- description vvv -->
-            <div class="desc">
-                <label for="description">Description: </label><br>
-                <textarea formControlName="description" cols="82" rows="10"></textarea><br>
-
-                <label for="image">Image: </label>
-                <input type="text" formControlName="image">
-                
-                <button type="submit">Post</button>  
-            </div>
+            <button type="submit">Post</button>  
+        </div>
+        <p *ngIf="mushroomForm.invalid && mushroomForm.touched">Please fill in all fields!</p>
+        <p *ngIf="submitted">Mushroom submitted!</p>
    </div>
-    
+
     
 </form>
