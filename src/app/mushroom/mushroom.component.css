@@ -23,6 +23,7 @@ h1 {
 h3 {
     color: rgb(82, 73, 64); 
     font-family: 'Open Sans', sans-serif; 
+    text-transform: capitalize;
     font-size: 20px; 
     font-weight: bold; 
     line-height: 32px; 
