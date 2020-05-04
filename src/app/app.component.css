@@ -9,8 +9,7 @@ body {
 
 .center {
     margin: auto;
-    width: 60%;
-    min-width: 600px;
+    max-width: 980px;
 }
 
 em {

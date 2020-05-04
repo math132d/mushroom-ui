@@ -9,6 +9,8 @@
     width: 100%;
     margin: 5px;
 
+    border: 2px solid rgb(82, 73, 64);
+
     height: 6rem;
 }
 
@@ -22,16 +24,18 @@
     display: flex;
     flex-direction: column;
 
-    background-color: lightgray;
+    background-color: white;
     padding: 10px;
 }
 
 .content h4 {
+    color: rgb(82, 73, 64);
     margin: 5px 0px;
     text-transform: capitalize;
 }
 
 .content p {
+    color: rgb(82, 73, 64);
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -42,5 +46,5 @@
     position: absolute; top: 0px; left: 0px;
     width: 100%; height: 100%;
     content: ' ';
-    background: linear-gradient(transparent, lightgray);
+    background: linear-gradient(transparent, white);
 }
