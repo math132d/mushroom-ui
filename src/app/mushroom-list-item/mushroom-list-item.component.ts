@@ -16,5 +16,4 @@ export class MushroomListItemComponent {
   routeTo(): void {
     this.router.navigate(['/mushroom/' + this.mushroom._id]);
   }
-
 }
