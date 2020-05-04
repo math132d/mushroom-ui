@@ -9,6 +9,8 @@
     width: 100%;
     margin: 5px;
 
+    cursor: pointer;
+
     border: 2px solid rgb(82, 73, 64);
 
     height: 6rem;

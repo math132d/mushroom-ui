@@ -1,16 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mushroom-list-item',
   templateUrl: './mushroom-list-item.component.html',
   styleUrls: ['./mushroom-list-item.component.css']
 })
-export class MushroomListItemComponent implements OnInit {
+export class MushroomListItemComponent {
   @Input() mushroom: any;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  routeTo(): void {
+    this.router.navigate(['/mushroom/' + this.mushroom._id]);
   }
 
 }

@@ -71,6 +71,15 @@ h3 {
     align-items: stretch;
 }
 
+a {
+    color: rgb(82, 73, 64);
+}
+
+a::after {
+    content: ' >';
+    text-decoration: none;
+}
+
 .mimg img{ 
     width: 100%;
     height: auto;

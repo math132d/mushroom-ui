@@ -21,8 +21,14 @@
                 <div><strong>Common name:</strong> {{ mushroom.name }} </div>
                 <br>
                 <div><strong>Scientific Classification:</strong></div>
-                <div><strong>Family:</strong> {{ mushroom.classification.family }} </div>
-                <div><strong>Genus:</strong>  {{ mushroom.classification.genus }} </div>
+                <div>
+                    <strong>Family: </strong>
+                    <a [routerLink]="['/family/' + mushroom.classification.family]">{{ mushroom.classification.family }} </a>
+                </div>
+                <div>
+                    <strong>Genus: </strong>
+                    <a [routerLink]="['/genus/' + mushroom.classification.genus]">{{ mushroom.classification.genus }} </a>
+                </div>
                 <div><strong>Species:</strong> {{ mushroom.classification.species }} </div>
             </div>
             <!-- Mushroom description vvv -->
