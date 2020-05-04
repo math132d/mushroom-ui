@@ -37,9 +37,9 @@
             <textarea formControlName="description" cols="82" rows="10"></textarea><br>
 
             <label for="image">Image: </label>
-            <input type="text" formControlName="image">
+            <input type="text" formControlName="image"><br>
             
-            <button type="submit">Post</button>  
+            <input type="submit" value="Post" >
         </div>
         <p *ngIf="mushroomForm.invalid && mushroomForm.touched">Please fill in all fields!</p>
         <p *ngIf="submitted">Mushroom submitted!</p>

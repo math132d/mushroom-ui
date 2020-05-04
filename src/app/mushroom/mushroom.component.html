@@ -18,7 +18,7 @@
                     <img *ngIf="mushroom.poisonous" src="assets/Icons/poison.png" alt="poisonous">
                 </figure>
                 <hr>
-                <div><strong>Common name:</strong> {{ mushroom.classification.species }} </div>
+                <div><strong>Common name:</strong> {{ mushroom.name }} </div>
                 <br>
                 <div><strong>Scientific Classification:</strong></div>
                 <div><strong>Family:</strong> {{ mushroom.classification.family }} </div>
@@ -33,6 +33,23 @@
                         {{ mushroom.description }}
                     </p>
                 </ul>
+            </div>
+        </div>
+        <div>
+            <!-- Comment section -->
+            <nav>
+                <h3><strong> Comments </strong></h3>
+            </nav>
+            <div>
+                <form class="comment-form" [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+                    <input required formControlName="name" type="text" placeholder="Name"><br>
+                    <textarea required formControlName="content" rows="3" placeholder="..."></textarea><br>
+                    <input type="submit" value="Comment"><br>
+                </form>
+            </div>
+            <p *ngIf="!mushroom.comments">Be the first to leave a comment!</p>
+            <div *ngIf="mushroom.comments">
+                <app-comment *ngFor="let comment of mushroom.comments" [comment]="comment"></app-comment>
             </div>
         </div>
     </article>

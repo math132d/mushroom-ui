@@ -12,6 +12,7 @@ import { AddMushroomComponent } from './add-mushroom/add-mushroom.component';
 import { MushroomListItemComponent } from './mushroom-list-item/mushroom-list-item.component';
 import { FamilyComponent } from './family/family.component';
 import { GenusComponent } from './genus/genus.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GenusComponent } from './genus/genus.component';
     AddMushroomComponent,
     MushroomListItemComponent,
     FamilyComponent,
-    GenusComponent
+    GenusComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
